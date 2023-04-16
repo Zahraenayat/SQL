@@ -1,0 +1,30 @@
+--Create women's apparel store database
+
+CREATE TABLE modestapparel (id INTEGER PRIMARY KEY, item_name TEXT,color TEXT,material TEXT, price INTEGER, aisle INTEGER, instock INTEGER, average_customer_five_star_rating INTEGER);
+
+INSERT INTO modestapparel VALUES(1,"hijjab","white","jersey",19.99,1,10,3);
+INSERT INTO modestapparel VALUES(2,"hijab","cream","jersey",19.99,1,10,4.5);
+INSERT INTO modestapparel VALUES(3,"hijab","mauve","jersey",19.99,1,1,5);
+INSERT INTO modestapparel VALUES(4,"hijab","pink","jersey",19.99,1,1,5);
+INSERT INTO modestapparel VALUES(5,"hijab","brown","jersey",19.99,1,0,5);
+INSERT INTO modestapparel VALUES(6,"longsleeve_top","white","cotton",9.99,2,15,2.5);
+INSERT INTO modestapparel VALUES(7,"longsleeve_top","cream","cotton",9.99,2,15,3);
+INSERT INTO modestapparel VALUES(8,"longsleeve_top","black","cotton",9.99,2,15,3);
+INSERT INTO modestapparel VALUES(9,"lonsleeve_top","gray","cotton",9.99,2,15,3);
+INSERT INTO modestapparel VALUES(10,"longsleeve_top","brown","cotton",9.99,2,4,5);
+INSERT INTO modestapparel VALUES(11,"longsleeve_top","green","cotton",9.99,2,3,5);
+INSERT INTO modestapparel VALUES(12,"graveyard_of_empires_graphic_tee","black","cotton",35.00,2,20,4);
+INSERT INTO modestapparel VALUES(13,"graveyard_of_empire_graphic_tee","white","cotton",35.00,2,20,4);
+INSERT INTO modestapparel VALUES(14,"graveyard_of_empires_graphic_tee","charcoal_gray","cotton",35.00,2,0,5);
+INSERT INTO modestapparel VALUES(15,"cargo_pants","khaki","nylon",40.00,3,20,4.5);
+INSERT INTO modestapparel VALUES(16,"cargo_pants","khaki_green","nylon",40.00,3,2,5);
+
+--display all items within database orderd by price
+SELECT * FROM modestapparel ORDER BY price;
+
+--display the aver price for all graveyard of empires graphic tees
+SELECT AVG(price) FROM modestapparel WHERE item_name='graveyard_of_empires_graphic_tee';
+
+--display best sellers in the store?
+SELECT * FROM modestapparel WHERE instock <=5 AND average_customer_five_star_rating = 5;
+-- items that were low in stock and had 5 star rating were selected to determine the best sellers within the store 

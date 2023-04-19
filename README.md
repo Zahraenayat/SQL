@@ -1,2 +1,2 @@
-# SQL
-SQL Portfolio
+# Zahra Enayat SQL Portfolio
+## Welcome to my SQL portfolio! This code repository contains examples of SQL I've written. Feel free to take a look and reach out with any questions via email: enayatzahra9@gmail.com
